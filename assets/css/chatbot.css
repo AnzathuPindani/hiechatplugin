@@ -1,0 +1,232 @@
+/* Floating Launcher */
+#custom-chatbot-launcher {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: rgb(161, 61, 0);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+#custom-chatbot-launcher:hover {
+    transform: scale(1.1);
+    background: #1a252f;
+}
+
+#custom-chatbot-icon {
+    font-size: 24px;
+    color: white;
+}
+
+/* Chat Container */
+#custom-chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    max-height: 500px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    z-index: 9998;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+/* Add these to your existing CSS */
+.chatbot-attachment-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #555;
+}
+
+.attachment-preview {
+    display: none;
+    padding: 10px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+}
+
+.attachment-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background: white;
+    border-radius: 4px;
+}
+
+.attachment-item .remove-attachment {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.attachment-message .message-content a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.attachment-message .message-content a:hover {
+    text-decoration: underline;
+}
+
+.attachment-image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+/* Add these styles to your CSS file */
+.message {
+    position: relative;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.message-timestamp {
+    font-size: 0.7em;
+    opacity: 0.7;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.user-message .message-timestamp {
+    color: #fff;
+}
+
+.bot-message .message-timestamp {
+    color: #666;
+}
+#custom-chatbot-container.active {
+    display: flex;
+}
+
+/* Header */
+.chatbot-header {
+    padding: 15px;
+    background: rgb(0, 102, 161);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Messages Area */
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background: #3498db;
+    color: white;
+    margin-left: auto;
+}
+
+.bot-message {
+    background: #ecf0f1;
+    margin-right: auto;
+}
+
+/* Input Area */
+.chatbot-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.chatbot-user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.chat-icon-image {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.chat-launcher-img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.chatbot-send-btn {
+    padding: 8px 15px;
+    background: rgb(161, 61, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.chatbot-footer {
+    padding: 8px 15px;
+    background: #f5f5f5;
+    border-top: 1px solid #eee;
+    font-size: 11px;
+    text-align: center;
+    color: #777;
+}
+
+.chatbot-footer a {
+    color: rgb(161, 61, 0);
+    text-decoration: none;
+}
+
+.chatbot-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    #custom-chatbot-container {
+        width: calc(100% - 40px);
+        right: 20px;
+        bottom: 80px;
+    }
+    
+    #custom-chatbot-launcher {
+        right: 20px;
+        bottom: 20px;
+    }
+}
